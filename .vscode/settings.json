@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "type_traits": "cpp",
+        "string": "cpp",
+        "array": "cpp",
+        "regex": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp"
+    }
+}
