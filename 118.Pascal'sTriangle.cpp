@@ -24,3 +24,33 @@ public:
         return ans;
     }
 };
+
+
+//Organised Approach
+//Brute Force
+class Solution {
+public:
+    vector<int>rCc(int r,int c)
+    {
+        vector<int> res;
+        int val = 1;
+        res.push_back(val);
+        for(int i=0;i<c;i++)
+        {
+            val = val*(r-i);
+            val = val/(i+1);
+
+            res.push_back(val);
+        }
+        return res;
+    }
+    vector<vector<int>> generate(int num) {
+        vector<vector<int>> ans;
+
+        for(int i=1;i<=num;i++)
+        {
+            ans.push_back(rCc(i-1,i-1));
+        }
+        return ans;
+    }
+};
