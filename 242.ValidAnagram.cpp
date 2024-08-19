@@ -32,11 +32,26 @@ public:
         sort(s.begin(),s.end());
         sort(t.begin(),t.end());
 
-        int n=max(s.size(),t.size());
+        return (s == t);
+    }
+};
 
-        for(int i=0;i<n;i++)
+//Third Approach
+//SC : O(1)
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        vector<int> v(26,0);
+
+        for(auto i : s)
+        v[i-'a']++;
+
+        for(auto i : t)
+        v[i-'a']--;
+
+        for(auto i : v)
         {
-           if(s[i]!=t[i])
+            if(i != 0)
             return false;
         }
         return true;
